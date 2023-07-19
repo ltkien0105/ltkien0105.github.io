@@ -30,6 +30,7 @@ confirmInput.onkeyup = function () {
 };
 
 submitBtn.onclick = async function () {
+  console.log(client);
   if (newInput.value.length >= 8 && confirmInput.value == newInput.value) {
     console.log( client.auth.currentSession);
     const { data, error } = await client.auth.updateUser({
