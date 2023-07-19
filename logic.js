@@ -31,6 +31,9 @@ confirmInput.onkeyup = function () {
 
 submitBtn.onclick = async function () {
   console.log(client);
+  console.log(client.auth);
+  console.log(client.auth.getSession());
+  console.log(client.auth.getUser());
   if (newInput.value.length >= 8 && confirmInput.value == newInput.value) {
     console.log( client.auth.currentSession);
     const { data, error } = await client.auth.updateUser({
