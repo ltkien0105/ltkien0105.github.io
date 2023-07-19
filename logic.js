@@ -35,7 +35,7 @@ submitBtn.onclick = async function () {
         password: newInput.value,
       });
 
-    console.log(data);
+    console.log(data + error);
   }
   return;
 };
